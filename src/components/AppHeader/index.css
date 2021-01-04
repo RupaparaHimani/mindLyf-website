@@ -1,0 +1,15 @@
+ input {
+   border: 1px solid lightgrey;
+   width: 260px;
+   padding-left: 10px;
+   white-space: 'wrap';
+   color: '#808080';
+   font-size: 14px;
+ }
+.modal-open{
+  overflow: auto !important;
+  padding-right: 0px !important;
+}
+body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){
+    overflow: auto !important;
+}

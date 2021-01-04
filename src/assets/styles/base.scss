@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+}
+
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./style.scss";
+@import "./pages/style.scss";
+@import "./components/header.scss";
+@import "./components/cards.scss";
+@import "./components/buttons.scss";
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
