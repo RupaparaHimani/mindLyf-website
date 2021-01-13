@@ -299,16 +299,16 @@ componentDidMount = () => {
             loggedIn: true,
         })
     }
-    if (localStorage.getItem('location')==null) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyD2VWtnOl4W4sYgLo7HHdizjDauYKyE1cQ')
-            .then(function (response) {
-              console.log(response);
-            })
-        console.log("Latitude is :", position.coords.latitude);
-        console.log("Longitude is :", position.coords.longitude);
-      });
-    }
+    // if (localStorage.getItem('location')==null) {
+    //   navigator.geolocation.getCurrentPosition(function(position) {
+    //     axios.get('https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyD2VWtnOl4W4sYgLo7HHdizjDauYKyE1cQ')
+    //         .then(function (response) {
+    //           console.log(response);
+    //         })
+    //     console.log("Latitude is :", position.coords.latitude);
+    //     console.log("Longitude is :", position.coords.longitude);
+    //   });
+    // }
 }
 
 nameChange = event => {

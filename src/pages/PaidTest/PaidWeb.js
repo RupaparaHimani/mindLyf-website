@@ -133,6 +133,7 @@ question = value => {
 }
 
 openCheckout = (amount,sessions, value, test_id) => {
+  console.log(amount, sessions, value, test_id, "========================");
     if (localStorage.getItem('isLoggedIn')) {
       localStorage.setItem('type', value)
         this.props.history.push({
@@ -212,7 +213,7 @@ openCheckout = (amount,sessions, value, test_id) => {
                         <Row>
                         { this.state.tests != null ? this.state.tests.map((test, index) =>
                             <Col md={4} style={{marginBottom: '50px'}} xs={6} key={index}>
-                                <Card className="shadowCard noBorder equalHeight paid" onClick={() => this.openCheckout(test.amount, test.session, test.mame, test.id)}>
+                                <Card className="shadowCard noBorder equalHeight paid" onClick={() => this.openCheckout(test.amount, test.session, test.name, test.id)}>
                                     <CardBody>
                                         <div style={{fontSize: '40', fontFamily: 'Nunito-Bold'}}>{test.name}</div>
                                         <div>₹ {test.amount}</div>

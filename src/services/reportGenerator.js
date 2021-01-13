@@ -34,7 +34,6 @@ const generatePDF = tickets => {
   // we define the name of our PDF file.
   var blobPDF = doc.output('datauristring');
   var blob = doc.output();
-  console.log("=================", typeof blob);
   var formData = new FormData();
   formData.append('pdf', blob);
   axios.post(api_url+'update_pdf', {user_id: JSON.parse(localStorage.getItem('userData')).id, pdf_blob: blob, order_id: localStorage.getItem('paid_test_test_is')})
